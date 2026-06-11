@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wordle — Auto Player</title>
+  <link rel="stylesheet" href="../fichierscss/auto.css">
+</head>
+<body>
+  <header>
+    <a href="../acceuil.html" class="back-btn">← Accueil</a>
+    <span class="header-title">WORDLE</span>
+    <span class="essais" id="essais-label">6 essais</span>
+  </header>
+  <div id="message"></div>
+  <div class="grid" id="grid"></div>
+  <button id="btn-rejouer" onclick="startAutoPlayer()" style="display: none;">
+    ↺ Rejouer
+  </button>
+  <button id="btn-pause" onclick="togglePause()">
+    ⏸ Pause
+  </button>
+  <script src="../fichiersjs/auto.js"></script>
+</body>
+</html>

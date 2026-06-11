@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wordle — Jouer</title>
+  <link rel="stylesheet" href="../fichierscss/wordle.css">
+</head>
+<body>
+
+  <header>
+    <a href="../acceuil.html" class="back-btn">← Accueil</a>
+    <span class="header-title">WORDLE</span>
+    <span class="essais" id="essais-label">6 essais</span>
+  </header>
+
+  <div id="message"></div>
+  
+  <div class="grid" id="grid"></div>
+
+  <div class="input-area" id="input-area">
+    <input type="text" id="word-input" maxlength="5" placeholder="mot..." autocomplete="off"/>
+    <button class="btn-submit" onclick="submitGuess()">OK</button>
+  </div>
+
+  <button id="btn-rejouer" onclick="initGame()" style="display:none;">↺ Rejouer</button>
+
+  <script src="../fichiersjs/wordle.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wordle</title>
+  <link rel="stylesheet" href="fichierscss/acceuil.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="letters">
+      <div class="box green">W</div>
+      <div class="box gray">O</div>
+      <div class="box yellow">R</div>
+      <div class="box gray">D</div>
+      <div class="box green">L</div>
+    </div>
+
+    <h1>WORDLE</h1>
+    <p class="subtitle">LE JEU DES 5 LETTRES • 6 ESSAIS</p>
+
+    <button class="btn play" onclick="window.location.href='pageshtml/wordle.html'">▶ JOUER</button>
+    <button class="btn how" onclick="window.location.href='pageshtml/auto.html'">auto play</button>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="mini-box green"></div>
+        <span>BONNE PLACE</span>
+      </div>
+      <div class="legend-item">
+        <div class="mini-box yellow"></div>
+        <span>MAUVAISE PLACE</span>
+      </div>
+      <div class="legend-item">
+        <div class="mini-box gray"></div>
+        <span>ABSENT</span>
+      </div>
+    </div>
+
+    <div class="link">
+      <a onclick="document.getElementById('popup').classList.add('active')">comment jouer?</a>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popup" class="overlay" onclick="document.getElementById('popup').classList.remove('active')">
+    <div class="popup-card" onclick="event.stopPropagation()">
+
+      <p class="p-title">Comment jouer ?</p>
+      <p class="p-sub">Trouve le mot en 6 essais. Chaque essai révèle des indices.</p>
+
+      <div class="p-tiles">
+        <div class="p-tile green">P</div>
+        <div class="p-tile gray">I</div>
+        <div class="p-tile gray">A</div>
+        <div class="p-tile yellow">N</div>
+        <div class="p-tile gray">O</div>
+      </div>
+
+      <div class="p-legend">
+        <div class="p-legend-item">
+          <div class="p-dot green"></div>
+          <span>Bonne lettre, <strong>bonne position</strong></span>
+        </div>
+        <div class="p-legend-item">
+          <div class="p-dot yellow"></div>
+          <span>Bonne lettre, <strong>mauvaise position</strong></span>
+        </div>
+        <div class="p-legend-item">
+          <div class="p-dot gray"></div>
+          <span>Lettre <strong>absente</strong> du mot</span>
+        </div>
+      </div>
+
+      <hr class="p-divider">
+
+      <div class="p-rules">
+        <p>— Le mot contient <span>5 lettres</span></p>
+        <p>— Tu as <span>6 tentatives</span> maximum</p>
+        <p>— Chaque essai doit être un <span>mot valide</span></p>
+        <p>— Le mot secret est <span>généré aléatoirement</span> à chaque partie</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

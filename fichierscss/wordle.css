@@ -1,0 +1,174 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a3a2a 0%, #2d4a6e 40%, #3b2d6e 70%, #1e3a5f 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+    }
+
+    header {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 16px 0;
+    }
+
+    .back-btn {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .back-btn:hover { color: #fff; }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      letter-spacing: 8px;
+      background: linear-gradient(90deg, #6aaa64, #c9b458, #fff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .essais {
+      font-size: 12px;
+      color: #6aaa64;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      background: rgba(83,141,78,0.15);
+      border: 1px solid rgba(83,141,78,0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      height: 28px;
+      padding: 4px 16px;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+    #message.win  { background: rgba(83,141,78,0.25);  color: #6aaa64; }
+    #message.lose { background: rgba(180,60,60,0.25);  color: #e07070; }
+    #message.info { background: rgba(181,159,59,0.2);  color: #c9b458; }
+
+    .grid {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .row { display: flex; gap: 8px; }
+
+    .cell {
+      width: 62px;
+      height: 62px;
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      transition: border-color 0.15s, transform 0.15s, background 0.2s;
+    }
+
+    .cell.filled {
+      border-color: #c9b458;
+      transform: scale(1.06);
+      background: rgba(201,180,88,0.08);
+    }
+
+    .cell.green  { background: #538d4e; border-color: #538d4e; }
+    .cell.yellow { background: #b59f3b; border-color: #b59f3b; }
+    .cell.gray   { background: #3a3a3c; border-color: #3a3a3c; }
+
+    .input-area {
+      margin-top: 28px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input[type="text"] {
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(201,180,88,0.35);
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      width: 200px;
+      padding: 12px 16px;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #c9b458;
+      background: rgba(201,180,88,0.08);
+    }
+
+    input[type="text"]::placeholder {
+      letter-spacing: 4px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.2);
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #538d4e, #6aaa64);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 22px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 4px 14px rgba(83,141,78,0.35);
+    }
+
+    .btn-submit:hover { opacity: 0.85; }
+    .btn-submit:active { transform: scale(0.97); }
+
+    #btn-rejouer {
+      display: none;
+      margin-top: 24px;
+      background: transparent;
+      color: #c9b458;
+      border: 1.5px solid rgba(201,180,88,0.4);
+      border-radius: 8px;
+      padding: 12px 32px;
+      font-family: 'Raleway', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    #btn-rejouer:hover { background: rgba(201,180,88,0.1); color: #fff; }

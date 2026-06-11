@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wordle — Comment Jouer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../fichierscss/how.css">
+</head>
+<body>
+<div class="card">
+  <p class="card-title">Comment jouer ?</p>
+  <p class="card-sub">Trouve le mot en 6 essais. Chaque essai révèle des indices.</p>
+  <div class="tiles">
+    <div class="tile green">P</div>
+    <div class="tile gray">I</div>
+    <div class="tile gray">A</div>
+    <div class="tile yellow">N</div>
+    <div class="tile gray">O</div>
+  </div>
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-dot green"></div>
+      <span class="legend-text">Bonne lettre, <strong>bonne position</strong></span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot yellow"></div>
+      <span class="legend-text">Bonne lettre, <strong>mauvaise position</strong></span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot gray"></div>
+      <span class="legend-text">Lettre <strong>absente</strong> du mot</span>
+    </div>
+  </div>
+  <hr class="divider">
+  <div class="rules">
+    <p class="rule">— Le mot contient <span>5 lettres</span></p>
+    <p class="rule">— Tu as <span>6 tentatives</span> maximum</p>
+    <p class="rule">— Chaque essai doit être un <span>mot valide</span></p>
+    <p class="rule">— Le mot secret est <span>généré aléatoirement</span> à chaque partie</p>
+  </div>
+</div>
+</body>
+</html>
